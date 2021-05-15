@@ -1,0 +1,7 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100vh;
+    background: #D5B5;
+}
