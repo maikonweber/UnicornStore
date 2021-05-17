@@ -5,10 +5,9 @@
     grid-column-start: 1;
     grid-column-end: 13;
     height: 48px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(241, 63, 173, 0.25) 0px 6px 6px;
     padding: 1px;
-    border-bottom: 4px;
+    border-bottom: 1px;
 }
 
 .logo {
@@ -33,9 +32,14 @@
 
 }
 
-.list li a {
+.list a  {
     color: pink;
 }
+
+.link .nav-linkactive {
+    color: red;
+}
+
 
 @media only screen and (max-width: 1440px) {
     .list {

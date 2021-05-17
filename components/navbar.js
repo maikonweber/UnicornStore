@@ -1,8 +1,22 @@
 import Styles from "../styles/navbar.module.css"
 import Image from "next/image"
 import Link  from "next/link"
+import { useRouter } from 'next/router'
+
+
+
+
 
 function Navbar() {
+    const router = useRouter()
+    const isActive = (r) => {
+        if ( r === router.pathname){
+            return "active"
+        }
+    }
+
+  
+  
     return (
         <nav className={Styles.navbar}>
             <a>
@@ -16,8 +30,8 @@ function Navbar() {
             
            
             <ul className={Styles.list}>
-                <li> <Link href="/cart" ><a> <i class="fas fa-cart-plus"></i> Cart </a></Link> </li>
-                <li> <Link href="/singin"><a>  <i class="fas fa-user"></i> Sing In  </a></Link> </li>
+                <li className={"nav-link" + isActive('/cart')}><Link href="/cart" ><a ><i aria-hidden="true" className="fas fa-cart-plus"></i> Cart </a></Link> </li>
+                <li > <Link href="/singin"><a><i aria-hidden="true" className="fas fa-user"></i> Sing In  </a></Link> </li>
             </ul>
         
         </nav>
