@@ -4,9 +4,6 @@ import Link  from "next/link"
 import { useRouter } from 'next/router'
 
 
-
-
-
 function Navbar() {
     const router = useRouter()
     const isActive = (r) => {
@@ -30,8 +27,10 @@ function Navbar() {
             
            
             <ul className={Styles.list}>
-                <li className={"nav-link" + isActive('/cart')}><Link href="/cart" ><a ><i aria-hidden="true" className="fas fa-cart-plus"></i> Cart </a></Link> </li>
-                <li > <Link href="/singin"><a><i aria-hidden="true" className="fas fa-user"></i> Sing In  </a></Link> </li>
+                <li className={"nav-link" + isActive('/cart')}>
+                    <Link href="/cart" ><a ><i aria-hidden="true" className="fas fa-cart-plus"></i> Cart </a></Link> </li>
+
+                <li><Link href="/signin"><a><i aria-hidden="true" className="fas fa-user"></i> Sing In  </a></Link> </li>
             </ul>
         
         </nav>

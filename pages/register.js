@@ -10,7 +10,7 @@ function Register() {
     const initialState = { name: '', email: '' , password: "", cf_password: ''}
     const [ userData, setUserData] = useState(initialState)
     const { name, email, password, cf_password } = userData
-    const [state, dispatch] = useContext(DataContext)
+    const {state, dispatch} = useContext(DataContext)
    
     const handleChangeInput = e => {
         const { name, value } = e.target 
@@ -22,7 +22,6 @@ function Register() {
     const handleSubmit = async e => { 
         e.preventDefault()
         const errMsg = valid(name, email, password, cf_password)
-        console.log(errMsg)
         if(errMsg) return dispatch({type: 'NOTIFY', payload: {error: errMsg}})
         
 
@@ -35,7 +34,7 @@ function Register() {
         
         return dispatch({type: "NOTIFY", payload: { sucess: res.msg} })
         
-
+    
     }
 
 

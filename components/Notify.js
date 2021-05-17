@@ -1,11 +1,10 @@
 import {useContext} from "react"
-
 import {DataContext} from "../store/GlobalState"
 import Loading from "./Loading"
 import Toast from "./toast"
 
 const Notify = () => {
-    const [state, dispatch ] = useContext(DataContext)
+    const {state, dispatch } = useContext(DataContext)
     const { notify } = state
 
     return (
@@ -17,7 +16,7 @@ const Notify = () => {
             handleShow={() => dispatch({type:'NOTIFY', payload: {}})}
             bgColor="bg-danger"/>}
 
-
+s
             {notify.sucess && <Toast  msg={{msg: notify.sucess, title: "Sucess"}}
             handleShow={() => dispatch({type:'NOTIFY', payload: {}})}
             bgColor="bg-sucess"/>}

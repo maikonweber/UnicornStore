@@ -21,7 +21,6 @@ const baseUrl = process.env.BASE_URL
             },
             body: JSON.stringify(post)
         })
-    
         const data = await res.json()
         return data
     }
